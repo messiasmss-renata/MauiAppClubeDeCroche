@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppClubeDeCroche.Views.InscricaoEvento"
+             Title="Resumo da Inscrição">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20"
+                             Spacing="12"
+                             BackgroundColor="#FCEEF0">
+
+            <Label Text="Clube do Crochê"
+                   FontSize="20"
+                   FontFamily="Georgia"
+                   FontAttributes="Bold"
+                   TextColor="#873D55"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Resumo da inscrição"
+                   FontSize="14"
+                   TextColor="#B45A78"
+                   HorizontalOptions="Center"/>
+
+            <Border Padding="15"
+                    Stroke="#E4C2CD">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label Text="Participante"
+                           FontAttributes="Bold"
+                           TextColor="#873D55"/>
+
+                    <Label Text="{Binding NomeParticipante}"/>
+
+                    <Label Text="{Binding NomeEvento}"
+                           FontAttributes="Bold"/>
+
+                    <Label Text="{Binding LocalEvento}"/>
+
+                    <Label Text="{Binding DataInicio, StringFormat='Início: {0:dd/MM/yyyy}'}"/>
+
+                    <Label Text="{Binding DataTermino, StringFormat='Término: {0:dd/MM/yyyy}'}"/>
+
+                    <Label Text="{Binding DuracaoEmDias, StringFormat='Duração: {0} dias'}"/>
+
+                    <Label Text="{Binding NumeroParticipantes, StringFormat='Participantes: {0}'}"/>
+
+                    <Label Text="{Binding QuantidadeDias, StringFormat='Dias selecionados: {0}'}"/>
+
+                    <Label Text="{Binding CustoPorParticipante, StringFormat='Valor por dia: R$ {0:F2}'}"/>
+
+                    <Label Text="{Binding ValorIndividual, StringFormat='Valor individual: R$ {0:F2}'}"
+                           FontAttributes="Bold"
+                           TextColor="#873D55"/>
+
+                    <Label Text="{Binding CustoTotal, StringFormat='Custo total do evento: R$ {0:F2}'}"
+                           FontAttributes="Bold"
+                           TextColor="#873D55"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

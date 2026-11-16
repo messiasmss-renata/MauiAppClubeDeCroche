@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppClubeDeCroche.Views.CadastroEvento"
+             Title="CadastroEvento">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="15"
+                             Spacing="10"
+                             BackgroundColor="#FCEEF0">
+
+            <Label Text="Clube do Crochê"
+                   FontSize="20"
+                   FontAttributes="Italic"
+                   HorizontalOptions="Center"
+                   TextColor="#873D55"
+                   FontFamily="Georgia"/>
+
+            <Image Source="clube_do_croche_banner.png"
+                   Aspect="AspectFill"
+                   HeightRequest="100"
+                   HorizontalOptions="Fill"/>
+
+            <Label Text="Clube do Crochê"
+                   FontSize="20"
+                   FontFamily="Georgia"
+                   FontAttributes="Bold"
+                   TextColor="#873D55"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Venha participar de um encontro especial dedicado à arte do crochê! Serão três dias de criatividade, aprendizado e apresentações de diferentes técnicas de crochê."
+                   FontSize="14"
+                   TextColor="#76545B"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="📅 20 a 22 de novembro de 2026"
+                   FontSize="14"
+                   TextColor="#76545B"/>
+
+            <Label Text="🧶 Entrada: R$ 50,00 por dia"
+                   FontSize="14"
+                   TextColor="#76545B"/>
+
+            <Label Text="📍 Meu Hotel - Campinas/SP"
+                   TextColor="#76545B"
+                   FontSize="14"/>
+
+            <Border Padding="15"
+                    Stroke="#E4C2CD"
+                    StrokeThickness="1">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label Text="Faça sua inscrição"
+                           FontSize="20"
+                           FontFamily="Georgia"
+                           TextColor="#873D55"
+                           HorizontalOptions="Center"/>
+
+                    <Label Text="Nome do participante:"
+                           FontSize="14"
+                           TextColor="#76545B"/>
+
+                    <Entry x:Name="ent_nome"
+                           Placeholder="Digite seu nome"/>
+
+                    <Label Text="Número de participantes:"
+                           FontSize="14"
+                           TextColor="#76545B"/>
+
+                    <Entry x:Name="ent_participantes"
+                           Placeholder="Digite a quantidade"
+                           Keyboard="Numeric"/>
+
+                    <Label Text="Selecione os dias de participação:"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="#873D55"/>
+
+                    <HorizontalStackLayout>
+                        <CheckBox x:Name="chk_dia20"
+                                  Color="#B45A78"/>
+                        <Label Text="20/11 - Sexta-feira"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout>
+                        <CheckBox x:Name="chk_dia21"
+                                  Color="#B45A78"/>
+                        <Label Text="21/11 - Sábado"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout>
+                        <CheckBox x:Name="chk_dia22"
+                                  Color="#B45A78"/>
+                        <Label Text="22/11 - Domingo"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <Button x:Name="Btn_calcular"
+                            Text="Calcular inscrição"
+                            BackgroundColor="#B45A78"
+                            TextColor="White"
+                            FontSize="18"
+                            CornerRadius="15"
+                            Margin="0,20,0,10"
+                            Clicked="Btn_calcular_Clicked"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
